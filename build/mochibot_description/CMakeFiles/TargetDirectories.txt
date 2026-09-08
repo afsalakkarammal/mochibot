@@ -1,9 +1,0 @@
-/home/rog-ubundu/mochibot_ws/build/mochibot_description/CMakeFiles/uninstall.dir
-/home/rog-ubundu/mochibot_ws/build/mochibot_description/CMakeFiles/mochibot_description_uninstall.dir
-/home/rog-ubundu/mochibot_ws/build/mochibot_description/CMakeFiles/test.dir
-/home/rog-ubundu/mochibot_ws/build/mochibot_description/CMakeFiles/edit_cache.dir
-/home/rog-ubundu/mochibot_ws/build/mochibot_description/CMakeFiles/rebuild_cache.dir
-/home/rog-ubundu/mochibot_ws/build/mochibot_description/CMakeFiles/list_install_components.dir
-/home/rog-ubundu/mochibot_ws/build/mochibot_description/CMakeFiles/install.dir
-/home/rog-ubundu/mochibot_ws/build/mochibot_description/CMakeFiles/install/local.dir
-/home/rog-ubundu/mochibot_ws/build/mochibot_description/CMakeFiles/install/strip.dir

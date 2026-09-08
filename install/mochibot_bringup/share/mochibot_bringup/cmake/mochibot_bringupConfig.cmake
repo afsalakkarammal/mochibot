@@ -1,1 +1,0 @@
-/home/rog-ubundu/mochibot_ws/build/mochibot_bringup/ament_cmake_core/mochibot_bringupConfig.cmake

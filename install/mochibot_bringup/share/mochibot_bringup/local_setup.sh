@@ -1,1 +1,0 @@
-/home/rog-ubundu/mochibot_ws/build/mochibot_bringup/ament_cmake_environment_hooks/local_setup.sh

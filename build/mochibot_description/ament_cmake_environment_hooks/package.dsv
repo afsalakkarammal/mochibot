@@ -1,4 +1,0 @@
-source;share/mochibot_description/local_setup.bash
-source;share/mochibot_description/local_setup.dsv
-source;share/mochibot_description/local_setup.sh
-source;share/mochibot_description/local_setup.zsh
