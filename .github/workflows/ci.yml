@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         env:
-          - { ROS_DISTRO: jazzy, ROS_REPO: main }
+          - { ROS_DISTRO: jazzy, ROS_REPO: main, UPSTREAM_WORKSPACE: 'github:ros-industrial/industrial_ci#master' }
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
