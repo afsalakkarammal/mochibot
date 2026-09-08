@@ -1,0 +1,15 @@
+/home/rog-ubundu/mochibot_ws/install/mochibot_navigation/share/ament_index/resource_index/package_run_dependencies/mochibot_navigation
+/home/rog-ubundu/mochibot_ws/install/mochibot_navigation/share/ament_index/resource_index/parent_prefix_path/mochibot_navigation
+/home/rog-ubundu/mochibot_ws/install/mochibot_navigation/share/mochibot_navigation/environment/ament_prefix_path.sh
+/home/rog-ubundu/mochibot_ws/install/mochibot_navigation/share/mochibot_navigation/environment/ament_prefix_path.dsv
+/home/rog-ubundu/mochibot_ws/install/mochibot_navigation/share/mochibot_navigation/environment/path.sh
+/home/rog-ubundu/mochibot_ws/install/mochibot_navigation/share/mochibot_navigation/environment/path.dsv
+/home/rog-ubundu/mochibot_ws/install/mochibot_navigation/share/mochibot_navigation/local_setup.bash
+/home/rog-ubundu/mochibot_ws/install/mochibot_navigation/share/mochibot_navigation/local_setup.sh
+/home/rog-ubundu/mochibot_ws/install/mochibot_navigation/share/mochibot_navigation/local_setup.zsh
+/home/rog-ubundu/mochibot_ws/install/mochibot_navigation/share/mochibot_navigation/local_setup.dsv
+/home/rog-ubundu/mochibot_ws/install/mochibot_navigation/share/mochibot_navigation/package.dsv
+/home/rog-ubundu/mochibot_ws/install/mochibot_navigation/share/ament_index/resource_index/packages/mochibot_navigation
+/home/rog-ubundu/mochibot_ws/install/mochibot_navigation/share/mochibot_navigation/cmake/mochibot_navigationConfig.cmake
+/home/rog-ubundu/mochibot_ws/install/mochibot_navigation/share/mochibot_navigation/cmake/mochibot_navigationConfig-version.cmake
+/home/rog-ubundu/mochibot_ws/install/mochibot_navigation/share/mochibot_navigation/package.xml

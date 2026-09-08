@@ -1,0 +1,2 @@
+source;share/mochibot_perception/environment/ament_prefix_path.sh
+source;share/mochibot_perception/environment/path.sh

@@ -1,0 +1,4 @@
+source;share/mochibot_bringup/local_setup.bash
+source;share/mochibot_bringup/local_setup.dsv
+source;share/mochibot_bringup/local_setup.sh
+source;share/mochibot_bringup/local_setup.zsh

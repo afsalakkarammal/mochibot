@@ -1,0 +1,15 @@
+/home/rog-ubundu/mochibot_ws/install/mochibot_description/share/ament_index/resource_index/package_run_dependencies/mochibot_description
+/home/rog-ubundu/mochibot_ws/install/mochibot_description/share/ament_index/resource_index/parent_prefix_path/mochibot_description
+/home/rog-ubundu/mochibot_ws/install/mochibot_description/share/mochibot_description/environment/ament_prefix_path.sh
+/home/rog-ubundu/mochibot_ws/install/mochibot_description/share/mochibot_description/environment/ament_prefix_path.dsv
+/home/rog-ubundu/mochibot_ws/install/mochibot_description/share/mochibot_description/environment/path.sh
+/home/rog-ubundu/mochibot_ws/install/mochibot_description/share/mochibot_description/environment/path.dsv
+/home/rog-ubundu/mochibot_ws/install/mochibot_description/share/mochibot_description/local_setup.bash
+/home/rog-ubundu/mochibot_ws/install/mochibot_description/share/mochibot_description/local_setup.sh
+/home/rog-ubundu/mochibot_ws/install/mochibot_description/share/mochibot_description/local_setup.zsh
+/home/rog-ubundu/mochibot_ws/install/mochibot_description/share/mochibot_description/local_setup.dsv
+/home/rog-ubundu/mochibot_ws/install/mochibot_description/share/mochibot_description/package.dsv
+/home/rog-ubundu/mochibot_ws/install/mochibot_description/share/ament_index/resource_index/packages/mochibot_description
+/home/rog-ubundu/mochibot_ws/install/mochibot_description/share/mochibot_description/cmake/mochibot_descriptionConfig.cmake
+/home/rog-ubundu/mochibot_ws/install/mochibot_description/share/mochibot_description/cmake/mochibot_descriptionConfig-version.cmake
+/home/rog-ubundu/mochibot_ws/install/mochibot_description/share/mochibot_description/package.xml

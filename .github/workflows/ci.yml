@@ -1,0 +1,22 @@
+name: MochiBot CI Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  industrial_ci:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        env:
+          - { ROS_DISTRO: jazzy, ROS_REPO: main }
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Run ROS Industrial CI
+        uses: ros-industrial/industrial_ci@master
+        env: ${{ matrix.env }}

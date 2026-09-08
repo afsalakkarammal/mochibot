@@ -1,0 +1,9 @@
+/home/rog-ubundu/mochibot_ws/build/mochibot_perception/CMakeFiles/uninstall.dir
+/home/rog-ubundu/mochibot_ws/build/mochibot_perception/CMakeFiles/mochibot_perception_uninstall.dir
+/home/rog-ubundu/mochibot_ws/build/mochibot_perception/CMakeFiles/test.dir
+/home/rog-ubundu/mochibot_ws/build/mochibot_perception/CMakeFiles/edit_cache.dir
+/home/rog-ubundu/mochibot_ws/build/mochibot_perception/CMakeFiles/rebuild_cache.dir
+/home/rog-ubundu/mochibot_ws/build/mochibot_perception/CMakeFiles/list_install_components.dir
+/home/rog-ubundu/mochibot_ws/build/mochibot_perception/CMakeFiles/install.dir
+/home/rog-ubundu/mochibot_ws/build/mochibot_perception/CMakeFiles/install/local.dir
+/home/rog-ubundu/mochibot_ws/build/mochibot_perception/CMakeFiles/install/strip.dir

@@ -1,0 +1,15 @@
+/home/rog-ubundu/mochibot_ws/install/mochibot_perception/share/ament_index/resource_index/package_run_dependencies/mochibot_perception
+/home/rog-ubundu/mochibot_ws/install/mochibot_perception/share/ament_index/resource_index/parent_prefix_path/mochibot_perception
+/home/rog-ubundu/mochibot_ws/install/mochibot_perception/share/mochibot_perception/environment/ament_prefix_path.sh
+/home/rog-ubundu/mochibot_ws/install/mochibot_perception/share/mochibot_perception/environment/ament_prefix_path.dsv
+/home/rog-ubundu/mochibot_ws/install/mochibot_perception/share/mochibot_perception/environment/path.sh
+/home/rog-ubundu/mochibot_ws/install/mochibot_perception/share/mochibot_perception/environment/path.dsv
+/home/rog-ubundu/mochibot_ws/install/mochibot_perception/share/mochibot_perception/local_setup.bash
+/home/rog-ubundu/mochibot_ws/install/mochibot_perception/share/mochibot_perception/local_setup.sh
+/home/rog-ubundu/mochibot_ws/install/mochibot_perception/share/mochibot_perception/local_setup.zsh
+/home/rog-ubundu/mochibot_ws/install/mochibot_perception/share/mochibot_perception/local_setup.dsv
+/home/rog-ubundu/mochibot_ws/install/mochibot_perception/share/mochibot_perception/package.dsv
+/home/rog-ubundu/mochibot_ws/install/mochibot_perception/share/ament_index/resource_index/packages/mochibot_perception
+/home/rog-ubundu/mochibot_ws/install/mochibot_perception/share/mochibot_perception/cmake/mochibot_perceptionConfig.cmake
+/home/rog-ubundu/mochibot_ws/install/mochibot_perception/share/mochibot_perception/cmake/mochibot_perceptionConfig-version.cmake
+/home/rog-ubundu/mochibot_ws/install/mochibot_perception/share/mochibot_perception/package.xml
