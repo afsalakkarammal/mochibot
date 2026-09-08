@@ -15,7 +15,7 @@ jobs:
           - { 
               ROS_DISTRO: jazzy, 
               ROS_REPO: main,
-              BEFORE_INSTALL_TARGET_DEPENDENCIES: "rosdep update"
+              TARGET_REPO_PATH: 'src'
             }
     steps:
       - name: Checkout Repository
