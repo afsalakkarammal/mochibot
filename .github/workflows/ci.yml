@@ -15,7 +15,7 @@ jobs:
           - { 
               ROS_DISTRO: jazzy, 
               ROS_REPO: main,
-              TARGET_REPO_PATH: 'src'
+              TARGET_REPO_PATH: '.'
             }
     steps:
       - name: Checkout Repository
