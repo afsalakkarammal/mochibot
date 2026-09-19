@@ -1,95 +1,435 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="mochibot">
 
-  <material name="chassis_cyan">
-    <color rgba="0.0 0.8 0.8 1.0"/>
-  </material>
-  <material name="wheel_black">
-    <color rgba="0.1 0.1 0.1 1.0"/>
-  </material>
+  <!-- ========================= -->
+  <!-- PARAMETERS -->
+  <!-- ========================= -->
+
+  <xacro:arg name="is_sim" default="false"/>
+
+  <xacro:property name="base_radius" value="0.18"/>
+  <xacro:property name="base_length" value="0.10"/>
+
+  <xacro:property name="wheel_radius" value="0.05"/>
+  <xacro:property name="wheel_length" value="0.02"/>
+  <xacro:property name="wheel_separation" value="0.38"/>
+
+  <xacro:property name="caster_radius" value="0.025"/>
+
+
+  <!-- ========================= -->
+  <!-- BASE FOOTPRINT -->
+  <!-- ========================= -->
 
   <link name="base_footprint"/>
 
   <joint name="base_footprint_joint" type="fixed">
     <parent link="base_footprint"/>
     <child link="base_link"/>
-    <origin xyz="0 0 0.05" rpy="0 0 0"/>
+
+    <!-- Base center is 5 cm above ground -->
+    <origin
+      xyz="0 0 ${base_length / 2.0}"
+      rpy="0 0 0"/>
   </joint>
+
+
+  <!-- ========================= -->
+  <!-- BASE -->
+  <!-- ========================= -->
 
   <link name="base_link">
+
     <visual>
       <geometry>
-        <cylinder radius="0.18" length="0.10"/>
+        <cylinder
+          radius="${base_radius}"
+          length="${base_length}"/>
       </geometry>
-      <material name="chassis_cyan"/>
+
+      <material name="chassis_cyan">
+        <color rgba="0.0 0.8 0.8 1.0"/>
+      </material>
     </visual>
+
     <collision>
       <geometry>
-        <cylinder radius="0.18" length="0.10"/>
+        <cylinder
+          radius="${base_radius}"
+          length="${base_length}"/>
       </geometry>
     </collision>
+
+    <inertial>
+      <mass value="5.0"/>
+
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0"/>
+
+      <inertia
+        ixx="0.045"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.045"
+        iyz="0.0"
+        izz="0.081"/>
+    </inertial>
+
   </link>
 
-  <!-- Left Wheel -->
+
+  <!-- ========================= -->
+  <!-- LEFT WHEEL -->
+  <!-- ========================= -->
+
   <link name="left_wheel_link">
+
     <visual>
+
+      <!-- Rotate cylinder so axle is along Y -->
+      <origin
+        xyz="0 0 0"
+        rpy="1.5708 0 0"/>
+
       <geometry>
-        <cylinder radius="0.05" length="0.02"/>
+        <cylinder
+          radius="${wheel_radius}"
+          length="${wheel_length}"/>
       </geometry>
-      <material name="wheel_black"/>
+
+      <material name="wheel_black">
+        <color rgba="0.1 0.1 0.1 1.0"/>
+      </material>
+
     </visual>
+
     <collision>
+
+      <!-- Rotate cylinder so axle is along Y -->
+      <origin
+        xyz="0 0 0"
+        rpy="1.5708 0 0"/>
+
       <geometry>
-        <cylinder radius="0.05" length="0.02"/>
+        <cylinder
+          radius="${wheel_radius}"
+          length="${wheel_length}"/>
       </geometry>
+
     </collision>
+
+    <inertial>
+
+      <mass value="0.5"/>
+
+      <origin
+        xyz="0 0 0"
+        rpy="1.5708 0 0"/>
+
+      <inertia
+        ixx="0.00035"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.00035"
+        iyz="0.0"
+        izz="0.000625"/>
+
+    </inertial>
+
   </link>
+
+
   <joint name="left_wheel_joint" type="continuous">
+
     <parent link="base_link"/>
     <child link="left_wheel_link"/>
-    <origin xyz="0 0.19 0" rpy="-1.5708 0 0"/>
-    <axis xyz="0 0 1"/>
+
+    <!--
+      Wheel center:
+      X = 0
+      Y = +0.19
+      Z = 0
+
+      Wheel radius = 0.05
+      Therefore wheel bottom = -0.05
+      Base bottom = -0.05
+    -->
+
+    <origin
+      xyz="0 ${wheel_separation / 2.0} 0"
+      rpy="0 0 0"/>
+
+    <axis xyz="0 1 0"/>
+
   </joint>
 
-  <!-- Right Wheel -->
+
+  <!-- ========================= -->
+  <!-- RIGHT WHEEL -->
+  <!-- ========================= -->
+
   <link name="right_wheel_link">
+
     <visual>
+
+      <!-- Rotate cylinder so axle is along Y -->
+      <origin
+        xyz="0 0 0"
+        rpy="1.5708 0 0"/>
+
       <geometry>
-        <cylinder radius="0.05" length="0.02"/>
+        <cylinder
+          radius="${wheel_radius}"
+          length="${wheel_length}"/>
       </geometry>
-      <material name="wheel_black"/>
+
+      <material name="wheel_black">
+        <color rgba="0.1 0.1 0.1 1.0"/>
+      </material>
+
     </visual>
+
     <collision>
+
+      <!-- Rotate cylinder so axle is along Y -->
+      <origin
+        xyz="0 0 0"
+        rpy="1.5708 0 0"/>
+
       <geometry>
-        <cylinder radius="0.05" length="0.02"/>
+        <cylinder
+          radius="${wheel_radius}"
+          length="${wheel_length}"/>
       </geometry>
+
     </collision>
+
+    <inertial>
+
+      <mass value="0.5"/>
+
+      <origin
+        xyz="0 0 0"
+        rpy="1.5708 0 0"/>
+
+      <inertia
+        ixx="0.00035"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.00035"
+        iyz="0.0"
+        izz="0.000625"/>
+
+    </inertial>
+
   </link>
+
+
   <joint name="right_wheel_joint" type="continuous">
+
     <parent link="base_link"/>
     <child link="right_wheel_link"/>
-    <origin xyz="0 -0.19 0" rpy="-1.5708 0 0"/>
-    <axis xyz="0 0 1"/>
+
+    <!--
+      Wheel center:
+      X = 0
+      Y = -0.19
+      Z = 0
+    -->
+
+    <origin
+      xyz="0 -${wheel_separation / 2.0} 0"
+      rpy="0 0 0"/>
+
+    <axis xyz="0 1 0"/>
+
   </joint>
 
-  <!-- Caster Wheel -->
+
+  <!-- ========================= -->
+  <!-- CASTER -->
+  <!-- ========================= -->
+
   <link name="caster_wheel_link">
+
     <visual>
+
       <geometry>
-        <sphere radius="0.025"/>
+        <sphere radius="${caster_radius}"/>
       </geometry>
-      <material name="wheel_black"/>
+
+      <material name="caster_black">
+        <color rgba="0.1 0.1 0.1 1.0"/>
+      </material>
+
     </visual>
+
     <collision>
+
       <geometry>
-        <sphere radius="0.025"/>
+        <sphere radius="${caster_radius}"/>
       </geometry>
+
     </collision>
+
+    <inertial>
+
+      <mass value="0.1"/>
+
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0"/>
+
+      <inertia
+        ixx="0.000025"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.000025"
+        iyz="0.0"
+        izz="0.000025"/>
+
+    </inertial>
+
   </link>
+
+
   <joint name="caster_wheel_joint" type="fixed">
+
     <parent link="base_link"/>
     <child link="caster_wheel_link"/>
-    <origin xyz="0.12 0 -0.025" rpy="0 0 0"/>
+
+    <!--
+      Base bottom = -0.05 m
+      Caster radius = 0.025 m
+
+      Caster center = -0.025 m
+      Caster bottom = -0.050 m
+
+      Therefore caster touches the same ground
+      level as the main wheels.
+    -->
+
+    <origin
+      xyz="${base_radius * 0.6} 0 -${base_length / 2.0 - caster_radius}"
+      rpy="0 0 0"/>
+
   </joint>
+
+
+  <!-- Make caster frictionless -->
+  <gazebo reference="caster_wheel_link">
+    <mu1>0.0</mu1>
+    <mu2>0.0</mu2>
+  </gazebo>
+
+
+  <!-- ========================= -->
+  <!-- SIMULATION ROS 2 CONTROL -->
+  <!-- ========================= -->
+
+  <xacro:if value="$(arg is_sim)">
+
+    <ros2_control
+      name="MochiBotSystem"
+      type="system">
+
+      <hardware>
+        <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+      </hardware>
+
+      <joint name="left_wheel_joint">
+
+        <command_interface name="velocity">
+          <param name="min">-15.0</param>
+          <param name="max">15.0</param>
+        </command_interface>
+
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+
+      </joint>
+
+      <joint name="right_wheel_joint">
+
+        <command_interface name="velocity">
+          <param name="min">-15.0</param>
+          <param name="max">15.0</param>
+        </command_interface>
+
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+
+      </joint>
+
+    </ros2_control>
+
+  </xacro:if>
+
+
+  <!-- ========================= -->
+  <!-- RVIZ / NON-SIMULATION -->
+  <!-- ========================= -->
+
+  <xacro:unless value="$(arg is_sim)">
+
+    <ros2_control
+      name="MochiBotSystem"
+      type="system">
+
+      <hardware>
+        <plugin>mock_components/GenericSystem</plugin>
+      </hardware>
+
+      <joint name="left_wheel_joint">
+
+        <command_interface name="velocity">
+          <param name="min">-15.0</param>
+          <param name="max">15.0</param>
+        </command_interface>
+
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+
+      </joint>
+
+      <joint name="right_wheel_joint">
+
+        <command_interface name="velocity">
+          <param name="min">-15.0</param>
+          <param name="max">15.0</param>
+        </command_interface>
+
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+
+      </joint>
+
+    </ros2_control>
+
+  </xacro:unless>
+
+
+  <!-- ========================= -->
+  <!-- GAZEBO ROS 2 CONTROL -->
+  <!-- ========================= -->
+
+  <xacro:if value="$(arg is_sim)">
+
+    <gazebo>
+
+      <plugin
+        filename="libgz_ros2_control-system.so"
+        name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+
+        <parameters>
+          $(find mochibot_bringup)/config/ros2_controllers.yaml
+        </parameters>
+
+      </plugin>
+
+    </gazebo>
+
+  </xacro:if>
 
 </robot>
