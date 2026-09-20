@@ -9,12 +9,10 @@ find_package(ament_cmake REQUIRED)
 # find_package(rclcpp REQUIRED) - REMOVED: Bringup packages typically do not contain C++ source code.
 # find_package(mochibot_description REQUIRED) - REMOVED: Build-time dependency is unnecessary; it is a run-time execution dependency.
 
-install(DIRECTORY 
-  launch
-  config
-  rviz
+install(
+  DIRECTORY launch config rviz
   DESTINATION share/${PROJECT_NAME}
-)
+  )
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
