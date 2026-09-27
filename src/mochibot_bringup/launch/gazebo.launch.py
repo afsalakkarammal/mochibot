@@ -55,6 +55,15 @@ def generate_launch_description():
             'gz_args': '-r empty.sdf'
         }.items()
     )
+    # Bridge Gazebo simulation clock to ROS 2
+    clock_bridge = Node(
+        package='ros_gz_bridge',
+        executable='parameter_bridge',
+        arguments=[
+            '/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock'
+        ],
+        output='screen'
+    )
 
     # Spawn robot into Gazebo
     spawn_robot = Node(
@@ -110,6 +119,7 @@ def generate_launch_description():
 
     return LaunchDescription([
         gazebo,
+	clock_bridge,
         robot_state_publisher,
         delayed_spawn,
         delayed_controllers
